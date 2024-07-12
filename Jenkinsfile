@@ -13,7 +13,7 @@ pipeline {
 
     stage("chekout from scm"){
         steps{
-            git branch: 'main', credentialsId: 'github-pat', url: 'https://github.com/malieo1/testdepoyment.git'
+            git branch: 'main', credentialsId: 'github', url: 'https://github.com/malieo1/testdepoyment.git'
         }
     }
 
@@ -35,7 +35,7 @@ pipeline {
                 git add front-deployment.yaml
                 git commit -m "updated deployment"
             """
-            withCredentials([gitUsernamePassword(credentialsId: 'github-pat', gitToolName: 'Default')]){
+            withCredentials([gitUsernamePassword(credentialsId: 'github', gitToolName: 'Default')]){
                 sh "git push https://github.com/malieo1/testdepoyment.git main"
             }
         }
