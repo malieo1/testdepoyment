@@ -5,11 +5,6 @@ pipeline {
   }
 
   stages {
-    stage ("cleanup workplace"){
-        steps{
-            clearWs()
-        }
-    }
 
     stage("chekout from scm"){
         steps{
