@@ -26,9 +26,9 @@ metadata:
   name: test-service
 spec:
   selector:
-    app: test-deplyment
+    app: test-php
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 80
+      targetPort: 8000
   type: NodePort
