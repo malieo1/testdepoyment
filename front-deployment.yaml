@@ -16,7 +16,7 @@ spec:
         - name: angular-front
           image: malekzahmoul20971/cicd-stage:1.0.0-33
           ports:
-            - containerPort: 4200
+            - containerPort: 8000
 
 ---
 
@@ -29,6 +29,6 @@ spec:
     app: test-php
   ports:
     - protocol: "TCP"
-      port: 4200 # The port that the service is running on in the cluster
-      targetPort: 4200 # The port exposed by the service
+      port: 8000 # The port that the service is running on in the cluster
+      targetPort: 8000 # The port exposed by the service
   type: LoadBalancer # type of the service.
