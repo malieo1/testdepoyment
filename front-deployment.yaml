@@ -20,15 +20,16 @@ spec:
 
 ---
 
-apiVersion: v1 # Kubernetes API version
-kind: Service # Kubernetes resource kind we are creating
-metadata: # Metadata of the resource kind we are creating
+apiVersion: v1
+kind: Service
+metadata:
   name: test-service
 spec:
   selector:
     app: test-php
   ports:
     - protocol: "TCP"
-      port: 8000 # The port that the service is running on in the cluster
-      targetPort: 8000 # The port exposed by the service
-  type: LoadBalancer # type of the service.
+      port: 8000
+      targetPort: 8000
+      nodePort: 32080
+  type: NodePort
