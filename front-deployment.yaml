@@ -16,7 +16,7 @@ spec:
         - name: angular-front
           image: malekzahmoul20971/cicd-stage:1.0.0-36
           ports:
-            - containerPort: 8000
+            - containerPort: 80
 
 ---
 
@@ -30,5 +30,6 @@ spec:
   ports:
     - protocol: TCP
       port: 80
-      targetPort: 8000
+      targetPort: 80
+      nodePort: 32080
   type: NodePort
