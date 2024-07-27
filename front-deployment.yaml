@@ -5,12 +5,12 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: test-php
+      app: test-deployment
   replicas: 1
   template:
     metadata:
       labels:
-        app: test-php
+        app: test-deployment
     spec:
       containers:
         - name: angular-front
