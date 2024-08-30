@@ -24,11 +24,12 @@ kind: Service
 metadata:
   name: test-service
 spec:
-  type: LoadBalancer
+  type: NodePort
   selector:
     app: test-deployment
   ports:
     - protocol: TCP
       port: 4200
       targetPort: 8000
+      nodePort: 30001
 
