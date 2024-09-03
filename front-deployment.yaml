@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: angular-front
-          image: malekzahmoul20971/cicd-stage:1.0.0-55
+          image: malekzahmoul20971/cicd-stage:1.0.0-69
           ports:
             - containerPort: 8000
 
