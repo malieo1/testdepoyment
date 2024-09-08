@@ -16,7 +16,7 @@ spec:
         - name: angular-front
           image: malekzahmoul20971/cicd-stage:1.0.0-47
           ports:
-            - containerPort: 8000
+            - containerPort: 80
 
 ---
 apiVersion: v1
@@ -29,7 +29,7 @@ spec:
     app: test-deployment
   ports:
     - protocol: TCP
-      port: 4200
-      targetPort: 8000
+      port: 80
+      targetPort: 80
       nodePort: 30001
 
